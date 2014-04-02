@@ -3,16 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Testing Hexo themes | jr0cket</title>
+  <title>Hexo Static site generator - modifying exiting themes | jr0cket</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="og:type" content="blog">
-<meta name="og:title" content="Testing Hexo themes">
-<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/29/testing-hexo-themes/">
+<meta name="og:title" content="Hexo Static site generator - modifying exiting themes">
+<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/">
 <meta name="og:image">
 <meta name="og:site_name" content="jr0cket">
-<meta name="og:description" content="Lets see how different themes look like when in Hexo.  This is just some basic content to help me see what they look like with content.
-Trying out code
-I wonder what code looks like when you look at i">
+<meta name="og:description" content="Hexo is a great way to create a blog or static website and comes with some responsive and great looking themes.  However, so your site doesnt look like everyone elses, you may want to customise the lo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@jr0cket">
   
@@ -72,10 +70,10 @@ I wonder what code looks like when you look at i">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-testing-hexo-themes" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hexo-static-site-generator---modifying-exiting-themes" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo-themes-test/2014/03/29/testing-hexo-themes/" class="article-date">
-  <time datetime="2014-03-29T01:02:50.000Z" itemprop="datePublished">Mar 29 2014</time>
+    <a href="/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/" class="article-date">
+  <time datetime="2014-04-02T06:45:21.000Z" itemprop="datePublished">Apr 2 2014</time>
 </a>
     
   </div>
@@ -86,7 +84,7 @@ I wonder what code looks like when you look at i">
         
   
     <h1 class="article-title" itemprop="name">
-      Testing Hexo themes
+      Hexo Static site generator - modifying exiting themes
     </h1>
   
 
@@ -94,32 +92,23 @@ I wonder what code looks like when you look at i">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Lets see how different themes look like when in Hexo.  This is just some basic content to help me see what they look like with content.</p>
-<h2 id="Trying_out_code">Trying out code</h2>
-<p>I wonder what code looks like when you look at it in this theme:</p>
-<pre><code><span class="list">(<span class="title"><span class="built_in">defn</span></span> clojure-function <span class="collection">[paramter]</span>
-  <span class="list">(<span class="title"><span class="built_in">str</span></span> <span class="string">"Lets do"</span> <span class="string">" "</span> <span class="string">"something simple"</span> <span class="string">", "</span> <span class="string">"using Clojure"</span>)</span>)</span>
-</code></pre><p>That should be a simple Clojure example using markdown indentation.  Lets try using a codeblock to see if there is any difference.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="code"><pre>(<span class="function"><span class="keyword">def</span> <span class="title">authors</span> [:</span>name <span class="string">"John Stevenson"</span>])
-
-(defn show-author [authors]
-  (str authors))
-  
-(show-author authors)
-[object Object]
-</pre></td></tr></table></figure>
+        <p>Hexo is a great way to create a blog or static website and comes with some responsive and great looking themes.  However, so your site doesnt look like everyone elses, you may want to customise the look and the easiest way is to modify an existing theme.</p>
+<h2 id="Landscape_-_the_default_theme">Landscape - the default theme</h2>
+<p>There are a wide range of themes to choose from, althought Landscape is one of the newest and is also the default so you dont need to instal it.</p>
+<h3 id="Location_of_themes">Location of themes</h3>
+<p>In the themes folder of your hexo project </p>
+<pre><code>hexo init 
+</code></pre><h2 id="Making_your_changes_work">Making your changes work</h2>
+<p>If you have already generated or deployed your site with a theme and then you modify it. it seems hexo does not pick up those changes.  First you need to run the command</p>
+<pre><code>hexo clean 
+</code></pre><p>This will remove the cache and the .deploy folders.  So now when you do</p>
+<pre><code>hexo <span class="keyword">generate</span>
+</code></pre><p>all new files are added to public.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/29/testing-hexo-themes/" data-id="ezoa57korxdwx6tj" class="article-share-link">Share</a>
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/" data-id="09m3bip2xfol6kbj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -128,19 +117,10 @@ I wonder what code looks like when you look at i">
     
 <nav id="article-nav">
   
-    <a href="/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Hexo Static site generator - modifying exiting themes
-        
-      </div>
-    </a>
   
-  
-    <a href="/hexo-themes-test/2014/03/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/03/29/testing-hexo-themes/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Testing Hexo themes</div>
     </a>
   
 </nav>
