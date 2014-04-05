@@ -395,9 +395,9 @@ body {
 .main-nav-link {
   float: left;
   color: #fff;
-  opacity: 0.6;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-  filter: alpha(opacity=60);
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
   text-decoration: none;
   text-shadow: 0 1px rgba(0,0,0,0.2);
   -webkit-transition: opacity 0.2s;
@@ -1329,7 +1329,7 @@ pre .javascript .function {
   -webkit-box-shadow: 0 -1px 4px #ccc inset;
   box-shadow: 0 -1px 4px #ccc inset;
   border: 1px solid #ccc;
-  padding: 15px;
+  padding: 12px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -1349,7 +1349,7 @@ pre .javascript .function {
 .widget ul dl,
 .widget ol dl,
 .widget dl dl {
-  margin-left: 15px;
+  margin-left: 12px;
   list-style: disc;
 }
 .widget {
