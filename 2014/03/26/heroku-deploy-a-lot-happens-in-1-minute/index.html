@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | jr0cket</title>
+  <title>Heroku deploy - a lot happens in 1 minute | jr0cket</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="og:type" content="blog">
-<meta name="og:title" content="Hello World">
-<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/29/hello-world/">
+<meta name="og:title" content="Heroku deploy - a lot happens in 1 minute">
+<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/26/heroku-deploy-a-lot-happens-in-1-minute/">
 <meta name="og:image">
 <meta name="og:site_name" content="jr0cket">
-<meta name="og:description" content="Welcome to Hexo! This is your very first post. Check documentation to learn how to use.">
+<meta name="og:description" content="As technology progresses then taking a few minutes to deploy your app can seem like a long time, but when you consider everything Heroku is doing during that time then its quite amazing
+
+
+Provision se">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@jr0cket">
   
@@ -70,10 +73,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-heroku-deploy-a-lot-happens-in-1-minute" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo-themes-test/2014/03/29/hello-world/" class="article-date">
-  <time datetime="2014-03-29T00:28:16.000Z" itemprop="datePublished">Mar 29 2014</time>
+    <a href="/hexo-themes-test/2014/03/26/heroku-deploy-a-lot-happens-in-1-minute/" class="article-date">
+  <time datetime="2014-03-26T19:36:33.000Z" itemprop="datePublished">Mar 26 2014</time>
 </a>
     
   </div>
@@ -84,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Heroku deploy - a lot happens in 1 minute
     </h1>
   
 
@@ -92,12 +95,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank">documentation</a> to learn how to use.</p>
+        <p>As technology progresses then taking a few minutes to deploy your app can seem like a long time, but when you consider everything Heroku is doing during that time then its quite amazing</p>
+<a id="more"></a>
+
+<h2 id="Provision_server_resources_&amp;_managing_traffic">Provision server resources &amp; managing traffic</h2>
+<p>Heroku creates a new “server” each time you deploy, so that the currently live application can still handle reuests until the new version is ready.  Rather than a whole bloated server, Heroku actually creates a new Linux container with a running OS.  This Linux container usually takes a second or less to create with a running operating system.</p>
+<h2 id="The_environment_is_then_established">The environment is then established</h2>
+<p>Every language you use to write your application needs some kind of runtime, eg. if you need Java you need the JVM, Ruby apps need a particular version of Ruby, Javascript probably needs nodejs and PHP needs a webserver.  As part of the Heroku buildpack used during the deployment, the relevant libraries and platforms are brought in.  Unless you change the configuration of your build or the buildfile you use, Heroku will always bring in the same version of the environment you need to run your app each time you deploy.</p>
+<h2 id="Compilation_of_code">Compilation of code</h2>
+<p>If your app is compiled, then the build process is run so you have a deployment made from your standard production build.</p>
+<p>Environment variables are set for the applications and any services (caching, logging, monitoring, etc) or datastores (postgres, redis, mongodb) are therefore automatically connected too.</p>
+<p>All the relevant processes are run and scalled (can you scale your app to a certain level when you deploy)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/29/hello-world/" data-id="ua23igghg9f24b43" class="article-share-link">Share</a>
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/26/heroku-deploy-a-lot-happens-in-1-minute/" data-id="vm4r3if5qi127l6n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,19 +119,19 @@
     
 <nav id="article-nav">
   
-    <a href="/hexo-themes-test/2014/03/29/testing-hexo-themes/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/03/29/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Testing Hexo themes
+          Hello World
         
       </div>
     </a>
   
   
-    <a href="/hexo-themes-test/2014/03/26/heroku-deploy-a-lot-happens-in-1-minute/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/03/16/emacs-org-mode-for-all-your-content/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Heroku deploy - a lot happens in 1 minute</div>
+      <div class="article-nav-title">Emacs Org-mode for all your content</div>
     </a>
   
 </nav>

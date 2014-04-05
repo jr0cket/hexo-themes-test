@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Customise Octopress themes for fun and your profit | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="og:type" content="blog">
+<meta name="og:title" content="Customise Octopress themes for fun and your profit">
+<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/12/customise-octopress-themes-for-fun-and-your-profit/">
+<meta name="og:image">
+<meta name="og:site_name" content="jr0cket">
+<meta name="og:description" content="Octopress themes are stored in the the root folder of your project in a folder called .themes.  If you installed one of the custom themes for Octopress [link], the .themes folder is where the instruct">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@jr0cket">
+  
+    <link rel="alternative" href="/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/hexo-themes-test/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexo-themes-test/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/hexo-themes-test/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives/">Archives</a>
+        
+          <a class="main-nav-link" href="/clojure/">Clojure</a>
+        
+          <a class="main-nav-link" href="/ubuntu/">Ubuntu</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.github.io/">Slides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.github.io/developer-guides">DevGuides</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://jr0cket.github.io/hexo-themes-test"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-customise-octopress-themes-for-fun-and-your-profit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-themes-test/2014/03/12/customise-octopress-themes-for-fun-and-your-profit/" class="article-date">
+  <time datetime="2014-03-12T16:28:28.000Z" itemprop="datePublished">Mar 12 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Customise Octopress themes for fun and your profit
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Octopress themes are stored in the the root folder of your project in a folder called .themes.  If you installed one of the custom themes for Octopress [link], the .themes folder is where the instructions tell you to clone the theme git repository.</p>
+<p>Themes can also be installed by passing a parameter to the rake install command. the default theme being “classic”.</p>
+<p>Using the .theme folder for your themes helps ensure that your customisations do not get over-written by Octopress updates .</p>
+<a id="more"></a>
+
+<h2 id="Including_font_families">Including font families</h2>
+<p>You can add hosted fonts just like you do with HTML pages using a link reference.  There are a large number of fonts from Google.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>&lt;link href=<span class="string">'http://fonts.googleapis.com/css?family=Lato'</span> rel=<span class="string">'stylesheet'</span> <span class="keyword">type</span>=<span class="string">'text/css'</span>&gt;
+</pre></td></tr></table></figure>
+
+
+<p>I like the Ubuntu font so I add the Ubutu and Ubunto Mono font families using the following code:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>&lt;link href=<span class="string">'http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu'</span> rel=<span class="string">'stylesheet'</span> <span class="keyword">type</span>=<span class="string">'text/css'</span>&gt;
+</pre></td></tr></table></figure>
+
+
+<p>You can select your own fonts to use by visiting <a href="Google fonts">http://www.google.com/fonts/</a> and adding the font families you like to your collection and Google Fonts will generate the line of code you need to add.</p>
+<p>To add Ubuntu fonts directly to your CSS you would use the following:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="attribute">font-family</span><span class="value">: <span class="string">'Ubuntu Mono'</span>, sans-serif;</span>
+<span class="attribute">font-family</span><span class="value">: <span class="string">'Ubuntu'</span>, sans-serif;</span>
+</pre></td></tr></table></figure>
+
+
+
+
+<h2 id="Changing_Colours">Changing Colours</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>sass/<span class="keyword">custom</span>/_colors.scss
+</pre></td></tr></table></figure>
+
+
+<h2 id="Example_-_light_colour_scheme">Example - light colour scheme</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="variable">$header</span><span class="attribute">-title</span><span class="attribute">-font</span><span class="attribute">-family</span>:
+<span class="string">"Lato"</span>,
+<span class="string">"Fontdiner Swanky"</span>,
+<span class="string">"Germania One"</span>,
+<span class="string">"Poller One"</span>,
+<span class="string">"Georgia"</span>,
+<span class="string">"Helvetica Neue"</span>,
+Arial,
+sans<span class="attribute">-serif</span> <span class="subst">!</span>default;
+</pre></td></tr></table></figure>
+
+
+
+
+
+
+<h2 id="Chainging_Style">Chainging Style</h2>
+<p>Change width of the body, the size of the dates and article titles as well as the codeblocks in </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>sass/<span class="keyword">custom</span>/_styles.scss
+</pre></td></tr></table></figure>
+
+
+<p>Example</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre><span class="tag">body</span> {
+  <span class="attribute">max-width</span><span class="value">: <span class="number">1100</span>px;</span>
+}
+<span class="tag">time</span> {
+  <span class="attribute">font-size</span><span class="value">: <span class="number">14</span>px;</span>
+}
+<span class="tag">h1</span> {
+  <span class="attribute">font-size</span><span class="value">: <span class="number">2.2</span>em;</span>
+}
+<span class="tag">section</span> {
+  &gt; <span class="tag">h1</span> {
+    <span class="attribute">font-size</span><span class="value">: <span class="number">1.5</span>em;</span>
+  }
+}
+codeblock {
+    <span class="attribute">font-size</span><span class="value">: <span class="number">1.1</span>em;</span>
+}
+</pre></td></tr></table></figure>
+
+
+
+<h2 id="Icons">Icons</h2>
+<p><a href="Social media">http://www.elegantthemes.com/blog/resources/free-social-media-icon-set</a></p>
+<h2 id="Header_images">Header images</h2>
+<p>adding a CSS-styled header image isn’t immediately obvious—at least, not to web-tards like me. My first inclination was to do a bunch of surgery on ~/octopress/source/_includes/custom/header.html and stuff an image in there; that worked, but it didn’t take more than a glance at the CSS behind the Octopress default site to see that the method used there didn’t involve any additional code going into the header section. Plus, just adding an image in there didn’t really fit with the HTML5 fanciness of Octopress and Jekyll—it didn’t resize or reflow as the page was changed.</p>
+<p>The key ended up being the realization that the header styling and its reflowing was coded in ~/octopress/sass/base/_layout.scss. True to form, that file has an override in ~/octopress/sass/custom/_layout.scss, and to that I made the following changes:</p>
+<h3 id="Example">Example</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+</pre></td><td class="code"><pre><span class="tag">body</span> &gt; <span class="tag">header</span> <span class="tag">h1</span> {
+      <span class="attribute">padding-left</span><span class="value">:<span class="number">2.5</span>em;</span>
+      <span class="attribute">text-align</span><span class="pseudo">:right</span>;
+      <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> only</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 432px</span>) {</span>
+              <span class="attribute">text-align</span><span class="pseudo">:left</span>;
+      }
+      <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> only</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 768px</span>) {</span>
+              <span class="attribute">padding-left</span><span class="value">:<span class="number">3</span>em;</span>
+      }
+      <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> only</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 992px</span>) {</span>
+              <span class="attribute">padding-left</span><span class="value">:<span class="number">2</span>em;</span>
+      }
+}
+
+<span class="tag">body</span> &gt; <span class="tag">header</span> <span class="tag">h2</span> {
+      <span class="attribute">padding-left</span><span class="value">:<span class="number">5.62</span>em;</span>
+      <span class="attribute">text-align</span><span class="pseudo">:right</span>;
+      <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> only</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 432px</span>) {</span>
+              <span class="attribute">text-align</span><span class="pseudo">:left</span>;
+              <span class="attribute">padding-left</span><span class="value">:<span class="number">3.9</span>em;</span>
+      }
+      <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> only</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 768px</span>) {</span>
+              <span class="attribute">padding-left</span><span class="value">:<span class="number">5</span>em;</span>
+      }
+      <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> only</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 992px</span>) {</span>
+              <span class="attribute">padding-left</span><span class="value">:<span class="number">2.9</span>em;</span>
+      }
+}
+
+<span class="tag">body</span> &gt; <span class="tag">header</span> <span class="tag">h1</span><span class="pseudo">:before</span> {
+      <span class="attribute">content</span><span class="value">:<span class="string">""</span>;</span>
+      <span class="attribute">position</span><span class="value">:absolute;</span>
+      <span class="attribute">left</span><span class="value">:<span class="number">0</span>em;</span>
+      <span class="attribute">right</span><span class="value">:<span class="number">0</span>;</span>
+      <span class="attribute">top</span><span class="value">:<span class="number">1.5</span>em;</span>
+      <span class="attribute">height</span><span class="value">:<span class="number">110</span>px;</span>
+      <span class="attribute">width</span><span class="value">:<span class="number">110</span>px;</span>
+      <span class="attribute">overflow</span><span class="value">:hidden;</span>
+      <span class="attribute">text-align</span><span class="pseudo">:right</span>;
+      <span class="attribute">background-image</span><span class="value">:url(<span class="string">'/images/bigdino-blog-head3.png'</span>);</span>
+      <span class="attribute">background-repeat</span><span class="value">:no-repeat;</span>
+      <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> only</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 432px</span>) {</span>
+              <span class="attribute">top</span><span class="value">:.<span class="number">32</span>em;</span>
+      }
+      <span class="at_rule">@<span class="keyword">media</span><span class="preprocessor"> only</span><span class="preprocessor"> screen</span><span class="preprocessor"> and</span> (min-width:<span class="preprocessor"> 768px</span>) {</span>
+              <span class="attribute">left</span><span class="value">:.<span class="number">75</span>em;</span>
+      }
+}
+</pre></td></tr></table></figure>
+
+
+
+<p>The changes are divided up into three sections: the first part styles the main title (“Bigdinosaur Blog”), the second styles the subtitle (“Tales of hacking and stomping on things”), and the third places and styles the background image. Each section also contains instructions on how the styles should change as the browser window’s width changes (the lines beginning with @media only).</p>
+<p>The most important thing, and the thing that wasn’t obvious to me at first but is actually really obvious in hindsight, is that the initial parameters for each section describe how the thing should look at its smallest, and then each min-width section describes how the thing should look starting at when the browser window is that wide or wider. So, look at header h1. This is the styling applied to the main title in the header. When the browser window is anywhere from 0 to 431 pixels wide, the title should be right-aligned with a bit of padding on its left to keep it from overlapping with the background dinosaur (more on overlapping in a bit). This is how things get displayed on, say, an iPhone.</p>
+<p>The instant the browser window is 432 pixels wide—which is the point at which the “Bigdinosaur Blog” text wraps to a single line—the text switches to left-aligned and the amount of padding changes, again to keep it from overlapping with the background dino. Another shift comes again at 768 pixels of width, and then final shift to the title’s most sprawling layout happens at 992 pixels.</p>
+<p>The subtitle, styled in the header h2 section, has similar directives—it starts out right-aligned, shifts to left-aligned at a certain point, and the amount of padding around it shifts as the browser window moves. The challenge with the subtitle is that I wanted it to maintain a consistent position relative to the main title, and since I’m doing my spacing using em values (which are themselves relative units), each new width setting required tuning by hand.</p>
+<p>The last section places the background image itself. In order to have the most control about where the image appears and where it reflows to, I’ve given it a position:absolute tag, which means that other styled elements ignore the background when figuring out their own layouts—hence all the fiddling about with padding for the header text. Instead of standard image floating behavior, an absolutely positioned image can sit on top of other page elements. This can be used to creative effect, like on the Octopress home page titlebar, but you do have to be mindful with the spacing and padding of your other elements so that they don’t get eaten.</p>
+<p>In its most narrow configuration, the background image sits on the far left of the page, with 1.5 ems of space from the top of its section to ensure that it doesn’t poke up past the main title, and with background-repeat:no-repeat set so that it only displays once rather than tiling or repeating itself. I also found that if I didn’t explicitly declare the height and width of the image, it wouldn’t display at all. Finally, there are two width settings that reposition the image as the page widens so that it maintains a visually pleasing position relative to the title.</p>
+<p>I mentioned it above, but it’s worth repeating: the values above are what work for my typeface choice and image size, and you will have to tweak your own to taste. Once I had decided exactly what I wanted to do and figured out what files to edit, it took probably an hour of making small changes and previewing and making small changes and previewing over and over again before I was happy with the way things lined up. I spent so much time fiddling, in fact, that I elected to abandon the idea of having the dino pic resize itself. Dinosaurs, I suppose, are meant to be displayed as large as possible, all the time, and would never consent to any funny-business resizing.</p>
+<p><a href="http://blog.bigdinosaur.org/changing-octopresss-header/" target="_blank">http://blog.bigdinosaur.org/changing-octopresss-header/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/12/customise-octopress-themes-for-fun-and-your-profit/" data-id="tk5ic50towcnb95u" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hexo-themes-test/2014/03/12/octopress-tips-using-rake-tasks-for-blogging/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Octopress tips - using rake tasks for blogging
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hexo-themes-test/2014/03/08/why-go-to-a-conference/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Why go to a conference</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/blogging/">blogging</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/blogging/octopress/">octopress</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/hexo-themes-test/tags/bootstrap/">bootstrap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-themes-test/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexo-themes-test/tags/octopress/">octopress</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/hexo-themes-test/tags/bootstrap/" style="font-size: 10.00px;">bootstrap</a><a href="/hexo-themes-test/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/hexo-themes-test/tags/octopress/" style="font-size: 20.00px;">octopress</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/04">April 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/03">March 2014</a><span class="archive-list-count">12</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/">Hexo - why I prefer it over Octopress</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/">Hexo Static site generator - modifying exiting themes</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/29/testing-hexo-themes/">Testing Hexo themes</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/26/heroku-deploy-a-lot-happens-in-1-minute/">Heroku deploy - a lot happens in 1 minute</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 John Stevenson<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/clojure/" class="mobile-nav-link">Clojure</a>
+  
+    <a href="/ubuntu/" class="mobile-nav-link">Ubuntu</a>
+  
+    <a href="http://jr0cket.github.io/" class="mobile-nav-link">Slides</a>
+  
+    <a href="http://jr0cket.github.io/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexo-themes-test/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/hexo-themes-test/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script type="text/javascript" src="/hexo-themes-test/js/script.js"></script>
+  </div>
+</body>
+</html>

@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | jr0cket</title>
+  <title>Creating content in markdown for your Octopress blog | jr0cket</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="og:type" content="blog">
-<meta name="og:title" content="Hello World">
-<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/29/hello-world/">
-<meta name="og:image">
+<meta name="og:title" content="Creating content in markdown for your Octopress blog">
+<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/13/creating-content-in-markdown-for-your-octopress-blog/">
+<meta name="og:image" content="/images/kittens-snuggled.png">
 <meta name="og:site_name" content="jr0cket">
-<meta name="og:description" content="Welcome to Hexo! This is your very first post. Check documentation to learn how to use.">
+<meta name="og:description" content="Octopress enables the creation of great looking blog post using simple markdown text.  This gives you a no-fuss way of writing your blogs without getting distracted.  Here I will cover how to add form">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@jr0cket">
   
@@ -70,10 +70,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-creating-content-in-markdown-for-your-octopress-blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo-themes-test/2014/03/29/hello-world/" class="article-date">
-  <time datetime="2014-03-29T00:28:16.000Z" itemprop="datePublished">Mar 29 2014</time>
+    <a href="/hexo-themes-test/2014/03/13/creating-content-in-markdown-for-your-octopress-blog/" class="article-date">
+  <time datetime="2014-03-13T19:32:20.000Z" itemprop="datePublished">Mar 13 2014</time>
 </a>
     
   </div>
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Creating content in markdown for your Octopress blog
     </h1>
   
 
@@ -92,33 +92,88 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank">documentation</a> to learn how to use.</p>
+        <p>Octopress enables the creation of great looking blog post using simple markdown text.  This gives you a no-fuss way of writing your blogs without getting distracted.  Here I will cover how to add formatting to you text and embedding code and other useful media into your blog posts.</p>
+<blockquote><p>In my previous blog on Octopress I covered the blogging workflow and the handful of rake commands that help you create and deploy your blog posts consistently. </p></blockquote>
+
+<a id="more"></a>
+
+<h2 id="Adding_styles_to_text">Adding styles to text</h2>
+<p>Headings<br>Bold, italic </p>
+<h2 id="Adding_images">Adding images</h2>
+<p>Images are always a good way to explain concepts or to just get attendtion for your writing.</p>
+<p>To add an image to your post, you add the following code </p>
+<figure class="highlight"><figcaption><span>[Insert an image inyour post]</span><a href="http://octopress.org/docs/plugins/image-tag/" target="_blank">link</a></figcaption><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>  [<span class="built_in">object</span> <span class="built_in">Object</span>]
+</pre></td></tr></table></figure>
+
+
+<p>Here is an example with my two cute cats:</p>
+<img src="/images/kittens-snuggled.png">
+
+
+<h3 id="More_examples">More examples</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>  [<span class="built_in">object</span> <span class="built_in">Object</span>]
+  [<span class="built_in">object</span> <span class="built_in">Object</span>]
+  [<span class="built_in">object</span> <span class="built_in">Object</span>]
+  [<span class="built_in">object</span> <span class="built_in">Object</span>]
+</pre></td></tr></table></figure>
+
+
+
+<h2 id="Showing_code">Showing code</h2>
+<h3 id="Code_blocks">Code blocks</h3>
+<p>You can embed code snippets directly in the markup of the blog posts you write using the codeblock directive.<br><a href="http://octopress.org/docs/plugins/codeblock/" target="_blank">http://octopress.org/docs/plugins/codeblock/</a></p>
+<p>These are okay but I have not figured out a way to stop Octopress examples from rendering incorrectly (unless there is an Octopress update that fixes this)</p>
+<p>[TODO - figure out how to show code snippets that are also liquid calls]</p>
+<h3 id="Github_Gists">Github Gists</h3>
+<p>I am used to using Github and Gists for sharing and collaborating around code, so as Octopress can use Gits then I have started using the gist directive.</p>
+<script src="https://gist.github.com/9532424.js"></script>
+
+
+<p>See the <a href="Octopress article on Github gists">http://octopress.org/docs/plugins/gist-tag/</a> for a few more examples.</p>
+<h2 id="Adding_Video">Adding Video</h2>
+<p>You can add embedded videos from YouTube and Vimeo very easily, you just need to know the id of the video which is the last characters of the </p>
+<p>For example, there is a great video by Lindsey Stirling at <a href="https://www.youtube.com/watch?v=DHdkRvEzW84" target="_blank">https://www.youtube.com/watch?v=DHdkRvEzW84</a>, so to include this video in a post I would use the video id at the end of that web address (after the watch?v=).  So I would add the following code to my code</p>
+<p>  youtub DHdkRvEzW84</p>
+<p>You can use either YouTube or Vimeo for your video souce using the following syntax:</p>
+<p>   youtube video-id<br>   vimeo video-id</p>
+<h3 id="Example">Example</h3>
+<p>A beautiful video with amazing music from Lindsey Stirling:</p>
+ <div class="video-container"><iframe src="//www.youtube.com/embed/DHdkRvEzW84" frameborder="0" allowfullscreen></iframe></div>
+
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/29/hello-world/" data-id="ua23igghg9f24b43" class="article-share-link">Share</a>
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/13/creating-content-in-markdown-for-your-octopress-blog/" data-id="0q9g6mr76xsw24qm" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/octopress/">octopress</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/hexo-themes-test/2014/03/29/testing-hexo-themes/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/03/13/updating-octopress-with-bug-fixes-and-enhancments/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Testing Hexo themes
+          Updating Octopress with bug fixes and enhancments
         
       </div>
     </a>
   
   
-    <a href="/hexo-themes-test/2014/03/26/heroku-deploy-a-lot-happens-in-1-minute/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/03/12/octopress-tips-using-rake-tasks-for-blogging/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Heroku deploy - a lot happens in 1 minute</div>
+      <div class="article-nav-title">Octopress tips - using rake tasks for blogging</div>
     </a>
   
 </nav>

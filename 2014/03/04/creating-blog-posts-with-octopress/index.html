@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | jr0cket</title>
+  <title>Creating blog posts with Octopress | jr0cket</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="og:type" content="blog">
-<meta name="og:title" content="Hello World">
-<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/29/hello-world/">
+<meta name="og:title" content="Creating blog posts with Octopress">
+<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/04/creating-blog-posts-with-octopress/">
 <meta name="og:image">
 <meta name="og:site_name" content="jr0cket">
-<meta name="og:description" content="Welcome to Hexo! This is your very first post. Check documentation to learn how to use.">
+<meta name="og:description" content="Octopress provides an easy way to create blog posts by proving a task that will automatically place and name your markdown file.  This helps manage your blog posts in a sensible structure and avoids c">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@jr0cket">
   
@@ -70,10 +70,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-creating-blog-posts-with-octopress" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo-themes-test/2014/03/29/hello-world/" class="article-date">
-  <time datetime="2014-03-29T00:28:16.000Z" itemprop="datePublished">Mar 29 2014</time>
+    <a href="/hexo-themes-test/2014/03/04/creating-blog-posts-with-octopress/" class="article-date">
+  <time datetime="2014-03-04T15:46:14.000Z" itemprop="datePublished">Mar 4 2014</time>
 </a>
     
   </div>
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Creating blog posts with Octopress
     </h1>
   
 
@@ -92,12 +92,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank">documentation</a> to learn how to use.</p>
+        <p>Octopress provides an easy way to create blog posts by proving a task that will automatically place and name your markdown file.  This helps manage your blog posts in a sensible structure and avoids conflicts.</p>
+<p>To create a new post, use the following command inside your Octopress project folder:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>rake new_post[<span class="string">"Title of your blog post"</span>]
+</pre></td></tr></table></figure>
+
+
+<p>This will create a markdown file including frontmatter to apply the blog post style.  The task creates the file under the _source folder and included the date at the start of the filename.</p>
+<p><a id="more"></a><br>Now you can edit the file and simply add your content.  Once you have written your blog post you can ask Octopress to generate the html for your new post.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>rake <span class="keyword">generate</span> 
+</pre></td></tr></table></figure>
+
+
+<p>You can view the results locally, or simply deploy up to your chosen location (eg. github pages)</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>rake preview
+rake deploy  
+</pre></td></tr></table></figure>
+
+
+<p>If you are confident about the changes you are making, or have a test website you are deploying to, then you can use a single command to generate the new version of the site and publish it directly.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>rake gen_deploy
+</pre></td></tr></table></figure>
+
+
+
+<h2 id="Summary">Summary</h2>
+<p>This covers the bloggine workflow for Octopress.  Next we will cover adding content in your blog post markdown files, inlcuding text formatting, images, code snippets, embedded video, etc</p>
+<p>Thank you</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/29/hello-world/" data-id="ua23igghg9f24b43" class="article-share-link">Share</a>
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/04/creating-blog-posts-with-octopress/" data-id="ac47q0r7evo0boez" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,19 +137,19 @@
     
 <nav id="article-nav">
   
-    <a href="/hexo-themes-test/2014/03/29/testing-hexo-themes/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/03/08/create-great-looking-website-content-with-twitter-bootstrap/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Testing Hexo themes
+          Create great looking website content with Twitter Bootstrap
         
       </div>
     </a>
   
   
-    <a href="/hexo-themes-test/2014/03/26/heroku-deploy-a-lot-happens-in-1-minute/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/03/03/octopress-first-blog-post-ever-awesome/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Heroku deploy - a lot happens in 1 minute</div>
+      <div class="article-nav-title">First blog post ever - awesome</div>
     </a>
   
 </nav>

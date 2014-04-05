@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | jr0cket</title>
+  <title>Updating Octopress with bug fixes and enhancments | jr0cket</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="og:type" content="blog">
-<meta name="og:title" content="Hello World">
-<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/29/hello-world/">
+<meta name="og:title" content="Updating Octopress with bug fixes and enhancments">
+<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/13/updating-octopress-with-bug-fixes-and-enhancments/">
 <meta name="og:image">
 <meta name="og:site_name" content="jr0cket">
-<meta name="og:description" content="Welcome to Hexo! This is your very first post. Check documentation to learn how to use.">
+<meta name="og:description" content="For each Octopres project you have created (ie. for each blog / website you created with Octopress) you need to pull some code from Github remote (octopress master) and run a few rake tasks.
+Before yo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@jr0cket">
   
@@ -70,10 +71,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-updating-octopress-with-bug-fixes-and-enhancments" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo-themes-test/2014/03/29/hello-world/" class="article-date">
-  <time datetime="2014-03-29T00:28:16.000Z" itemprop="datePublished">Mar 29 2014</time>
+    <a href="/hexo-themes-test/2014/03/13/updating-octopress-with-bug-fixes-and-enhancments/" class="article-date">
+  <time datetime="2014-03-13T19:32:54.000Z" itemprop="datePublished">Mar 13 2014</time>
 </a>
     
   </div>
@@ -84,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Updating Octopress with bug fixes and enhancments
     </h1>
   
 
@@ -92,12 +93,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank">documentation</a> to learn how to use.</p>
+        <p>For each Octopres project you have created (ie. for each blog / website you created with Octopress) you need to pull some code from Github remote (octopress master) and run a few rake tasks.</p>
+<p>Before you start with an update, check you Octopress projects files have been added to the Git repository or Stashed out of the way - as Octopress will try and overwrite them (although as its using git it will fail and warn you about a merge conflict).</p>
+<pre><code>git pull octopress master     <span class="comment"># Get the latest Octopress</span>
+bundle install                <span class="comment"># Keep gems updated</span>
+rake update_<span class="built_in">source</span>            <span class="comment"># update the template's source</span>
+rake update_style             <span class="comment"># update the template's style</span>
+</code></pre><p><a href="http://octopress.org/docs/updating/" target="_blank">http://octopress.org/docs/updating/</a></p>
+<p>Thank you</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/29/hello-world/" data-id="ua23igghg9f24b43" class="article-share-link">Share</a>
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/13/updating-octopress-with-bug-fixes-and-enhancments/" data-id="4kdj0qwpvqlkpd4x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,19 +114,19 @@
     
 <nav id="article-nav">
   
-    <a href="/hexo-themes-test/2014/03/29/testing-hexo-themes/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/03/16/emacs-org-mode-for-all-your-content/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Testing Hexo themes
+          Emacs Org-mode for all your content
         
       </div>
     </a>
   
   
-    <a href="/hexo-themes-test/2014/03/26/heroku-deploy-a-lot-happens-in-1-minute/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/03/13/creating-content-in-markdown-for-your-octopress-blog/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Heroku deploy - a lot happens in 1 minute</div>
+      <div class="article-nav-title">Creating content in markdown for your Octopress blog</div>
     </a>
   
 </nav>
