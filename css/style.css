@@ -1135,6 +1135,11 @@ a.article-title:hover {
   overflow: auto;
   color: #ccc;
   line-height: 22.400000000000002px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #333;
+  margin: 1px 10px 1px 10px;
+  border: 3px solid #eee;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -1143,7 +1148,7 @@ a.article-title:hover {
 }
 .article-entry pre,
 .article-entry code {
-  font-family: UbuntuMono;
+  font-family: "Ubuntu Mono";
 }
 .article-entry code {
   background: #eee;
@@ -1200,7 +1205,7 @@ a.article-title:hover {
 }
 .article-entry .gist .gist-file {
   border: none;
-  font-family: UbuntuMono;
+  font-family: "Ubuntu Mono";
   margin: 0;
 }
 .article-entry .gist .gist-file .gist-data {
