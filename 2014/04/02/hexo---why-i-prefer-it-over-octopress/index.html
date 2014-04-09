@@ -8,7 +8,7 @@
   <meta name="og:type" content="blog">
 <meta name="og:title" content="Hexo - why I prefer it over Octopress">
 <meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/">
-<meta name="og:image">
+<meta name="og:image" content="/images/hexo-server-example-output-on-changes.png">
 <meta name="og:site_name" content="jr0cket">
 <meta name="og:description" content="There are several static site &amp; blogging platforms available, so why did I choose Hexo over things like Jekyll, Octopress or DocPad?  Let me elaborate.
 
@@ -77,7 +77,7 @@ Ruby is">
         <section id="main"><article id="post-hexo---why-i-prefer-it-over-octopress" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/" class="article-date">
-  <time datetime="2014-04-02T12:55:29.000Z" itemprop="datePublished">Apr 2 2014</time>
+  <time datetime="2014-04-02T12:55:29.000Z" itemprop="datePublished">2 Apr 2014</time>
 </a>
     
   </div>
@@ -109,6 +109,17 @@ Ruby is">
 <p>rake new_post[“Title of blog post”]</p>
 <p>The differeces are small, but in terms of usabiltity to me there is quite a big difference. </p>
 <p>Rather than using octopress you have to remember that you are using the command rake.  This is fine if you are used to Ruby but something else you have to remember.  The whole form of the command makes it difficult to rember and actually harder to type (even for a touch typist).</p>
+<h2 id="Great_feedback_process">Great feedback process</h2>
+<p>If you run the Hexo server then any changes you make, either to the content of your site or the design (CSS, theme, etc) is automatically picked up and rendered.  So if you are curious about how your changes look, then you just need to point your browser to the hexo server, usually running on port 4000.</p>
+<p>So to run the hexo server you use the command:</p>
+<pre><code>hexo <span class="keyword">server</span>
+</code></pre><p>Then to see the results you open the link <a href="http://localhost:4000/" target="_blank">http://localhost:4000/</a></p>
+<p>When you make a change you get output in the console that is currently running the Hexo server, for example</p>
+<img src="/images/hexo-server-example-output-on-changes.png">
+
+
+<p>This allows me to work locally on my laptop and see the results instantaineously.  Only when I am ready to share my changes with the world do I need to generate the static content and push it to Github pages.</p>
+<p>This simple process should support me event when I have hundereds of blog posts and pages of content.  I wont have to wait for the generation of the site (although Hexo is pretty quick anyway, generating the site as it is in about 5 seconds).</p>
 <h2 id="Responsive_community">Responsive community</h2>
 <p>There is a healthy community around Hexo.  There are already lots of articles about configuring Hexo and creating your own themes.  I have found the project itself very responsive to issues and I even had a couple of pull requests accepted.</p>
 <h2 id="Multi-threaded_processing">Multi-threaded processing</h2>
@@ -121,7 +132,9 @@ Ruby is">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/" data-id="zi5o5k11abixffv8" class="article-share-link">Share</a>
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/" data-id="777iw9hhtin3u31c" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/octopress/">octopress</a></li></ul>
@@ -143,6 +156,12 @@ Ruby is">
   
 </article>
 
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -246,6 +265,20 @@ Ruby is">
   
 </nav>
     
+<script>
+  var disqus_shortname = 'disqus_dk7qgmDvT1';
+  
+  var disqus_url = 'http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 

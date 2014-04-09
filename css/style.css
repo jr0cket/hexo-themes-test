@@ -371,7 +371,7 @@ body {
 #subtitle {
   text-decoration: none;
   color: #fff;
-  font-weight: 300;
+  font-weight: 700;
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 #logo {
@@ -425,7 +425,7 @@ body {
   cursor: pointer;
 }
 .main-nav-link {
-  font-weight: 300;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 479px) {
@@ -559,7 +559,7 @@ body {
 .article-title {
   text-decoration: none;
   font-size: 2em;
-  font-weight: bold;
+  font-weight: normal;
   color: #555;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
@@ -595,7 +595,7 @@ a.article-title:hover {
 .article-entry h4,
 .article-entry h5,
 .article-entry h6 {
-  font-weight: bold;
+  font-weight: normal;
 }
 .article-entry h1,
 .article-entry h2,
