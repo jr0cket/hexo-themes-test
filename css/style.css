@@ -645,7 +645,8 @@ a.article-title:hover {
 }
 .article-entry blockquote {
   font-family: Ubuntu;
-  font-size: 1.4em;
+  font-style: italic;
+  font-size: 0.96em;
   margin: 1.6em 20px;
   text-align: center;
 }
@@ -1391,12 +1392,12 @@ pre .javascript .function {
 .category-list-count:before,
 .tag-list-count:before,
 .archive-list-count:before {
-  content: "(";
+  content: "[";
 }
 .category-list-count:after,
 .tag-list-count:after,
 .archive-list-count:after {
-  content: ")";
+  content: "]";
 }
 .tagcloud a {
   margin-right: 5px;

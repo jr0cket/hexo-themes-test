@@ -10,11 +10,10 @@
 <meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/">
 <meta name="og:image" content="/images/hexo-server-example-output-on-changes.png">
 <meta name="og:site_name" content="jr0cket">
-<meta name="og:description" content="There are several static site &amp; blogging platforms available, so why did I choose Hexo over things like Jekyll, Octopress or DocPad?  Let me elaborate.
+<meta name="og:description" content="There are several static website &amp; blogging platforms available, so why did I choose Hexo over things like Jekyll, Octopress, DocPad or writing my own?  Let me elaborate.
 
 
-I write more JavaScript than Ruby
-Ruby is">
+I write more JavaScript">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@jr0cket">
   
@@ -100,19 +99,21 @@ Ruby is">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>There are several static site &amp; blogging platforms available, so why did I choose Hexo over things like Jekyll, Octopress or DocPad?  Let me elaborate.</p>
+        <p>There are several static website &amp; blogging platforms available, so why did I choose <a href="http://hexo.io" target="_blank">Hexo</a> over things like Jekyll, Octopress, DocPad or writing my own?  Let me elaborate.</p>
 <a id="more"></a>
 
 <h2 id="I_write_more_JavaScript_than_Ruby">I write more JavaScript than Ruby</h2>
-<p>Ruby is a great language but one I dont use anymore.  It can be painful installing Ruby on my laptop and newest versions of Ruby are slow to reach Ubuntu &amp; MacOSX. </p>
+<p>Ruby is a great language but one I rarely use it for development anymore.  </p>
 <p>The languages I use the most are Clojure and JavaScript, so ideally the tools I use should be written in one of those languages.  Why, well I already have the environment set up to support tools in those languages and if I need to extend the tool then I have the skills to do so relatively quickly.</p>
+<h2 id="Ruby_is_a_pain_to_install">Ruby is a pain to install</h2>
+<p>I have had a lot of problems with Ruby on MacOSX and Ubuntu, with only compilation from source code being successful.  This takes a bit of time and requires extra packages to be installed I otherwise wouldnt need.  RVM did strange things to my bash resource files last time I tried it out and the install failed on both MacOSX and Ubuntu.</p>
 <h2 id="New_is_often_Better">New is often Better</h2>
-<p>Hexo is new and yet has learnt a lot from Octopres, so has the advantage of not backing in any technical debt.  One example of why hexo is better is very simple </p>
-<p>heroku new “title of blog post”</p>
-<p>verses a slightly more tricky to type command from Octopress</p>
-<p>rake new_post[“Title of blog post”]</p>
-<p>The differeces are small, but in terms of usabiltity to me there is quite a big difference. </p>
-<p>Rather than using octopress you have to remember that you are using the command rake.  This is fine if you are used to Ruby but something else you have to remember.  The whole form of the command makes it difficult to rember and actually harder to type (even for a touch typist).</p>
+<p>Hexo is relatively new and yet has learnt a lot from Octopres.  So has the advantage of not baking in any technical debt or having language specific quirks.  One example of why I like Hexo better is very simple.  To create a new file for a blog post in Hexo you use the command:</p>
+<pre><code>hexo <span class="keyword">new</span> <span class="string">"title of blog post"</span>
+</code></pre><p>With Octopress the command is similar, but just a bit more trickyer to remember and to type:</p>
+<pre><code>rake new_post[<span class="string">"Title of blog post"</span>]
+</code></pre><p>The differeces are relatively small, but in terms of usabiltity I feel a big difference especially as I write several blog posts a week. </p>
+<p>Rather than using the command <code>octopress</code> you have to remember that you are using the command <code>rake</code>.  This is fine if you are used to Ruby every day, but I am not.  The form of the command also makes it difficult to rember (eg, that you have to use brackets and which ones were they again) and its actually harder to type, especially for a touch typist.</p>
 <h2 id="Great_feedback_process">Great feedback process</h2>
 <p>If you run the Hexo server then any changes you make, either to the content of your site or the design (CSS, theme, etc) is automatically picked up and rendered.  So if you are curious about how your changes look, then you just need to point your browser to the hexo server, usually running on port 4000.</p>
 <p>So to run the hexo server you use the command:</p>
@@ -136,7 +137,7 @@ Ruby is">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/" data-id="fselcp8tahaj562b" class="article-share-link">Share</a>
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/" data-id="x16un66sa89rluiy" class="article-share-link">Share</a>
       
         <a href="http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -148,6 +149,15 @@ Ruby is">
   
     
 <nav id="article-nav">
+  
+    <a href="/hexo-themes-test/2014/04/10/hexo-theme-building-with-chrome-developer-tools/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hexo theme building with Chrome developer tools
+        
+      </div>
+    </a>
   
   
     <a href="/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/" id="article-nav-older" class="article-nav-link-wrap">
@@ -181,9 +191,22 @@ Ruby is">
   
     
   <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/blogging/">blogging</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/cloud/">cloud</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-events/">dev-events</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-tools/">dev-tools</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/to-delete/">to-delete</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
     <h3 class="widget-title">Recent posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/10/hexo-theme-building-with-chrome-developer-tools/">Hexo theme building with Chrome developer tools</a>
+          </li>
         
           <li>
             <a href="/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/">Hexo - why I prefer it over Octopress</a>
@@ -221,10 +244,6 @@ Ruby is">
             <a href="/hexo-themes-test/2014/03/12/octopress-tips-using-rake-tasks-for-blogging/">Octopress tips - using rake tasks for blogging</a>
           </li>
         
-          <li>
-            <a href="/hexo-themes-test/2014/03/12/customise-octopress-themes-for-fun-and-your-profit/">Customise Octopress themes for fun and your profit</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -235,7 +254,7 @@ Ruby is">
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/04">April 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/03">March 2014</a><span class="archive-list-count">12</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/04">April 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/03">March 2014</a><span class="archive-list-count">12</span></li></ul>
     </div>
   </div>
 
