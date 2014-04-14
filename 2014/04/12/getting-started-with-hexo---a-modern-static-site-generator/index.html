@@ -3,14 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo Static site generator - modifying exiting themes | jr0cket</title>
+  <title>Getting started with Hexo - a modern static site generator | jr0cket</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="og:type" content="blog">
-<meta name="og:title" content="Hexo Static site generator - modifying exiting themes">
-<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/">
+<meta name="og:title" content="Getting started with Hexo - a modern static site generator">
+<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/04/12/getting-started-with-hexo---a-modern-static-site-generator/">
 <meta name="og:image">
 <meta name="og:site_name" content="jr0cket">
-<meta name="og:description" content="Hexo is a great way to create a blog or static website and comes with some responsive and great looking themes.  However, so your site doesnt look like everyone elses, you may want to customise the lo">
+<meta name="og:description" content="Hexo is a modern static website generator &amp; bloging platform written in Node.js. This is a quick guide to get going:
+Install Node.js
+If you havent already got node, go to http://nodejs.org/ and fo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@jr0cket">
   
@@ -70,10 +72,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hexo-static-site-generator---modifying-exiting-themes" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-getting-started-with-hexo---a-modern-static-site-generator" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/" class="article-date">
-  <time datetime="2014-04-02T06:45:21.000Z" itemprop="datePublished">2 Apr 2014</time>
+    <a href="/hexo-themes-test/2014/04/12/getting-started-with-hexo---a-modern-static-site-generator/" class="article-date">
+  <time datetime="2014-04-12T14:13:19.000Z" itemprop="datePublished">12 Apr 2014</time>
 </a>
     
   <div class="article-category">
@@ -88,7 +90,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo Static site generator - modifying exiting themes
+      Getting started with Hexo - a modern static site generator
     </h1>
   
 
@@ -96,30 +98,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Hexo is a great way to create a blog or static website and comes with some responsive and great looking themes.  However, so your site doesnt look like everyone elses, you may want to customise the look and the easiest way is to modify an existing theme.</p>
-<a id="more"></a>
-
-<h2 id="Landscape_-_the_default_theme">Landscape - the default theme</h2>
-<p>There are a wide range of themes to choose from, althought Landscape is one of the newest and is also the default so you dont need to instal it.</p>
-<h3 id="Location_of_themes">Location of themes</h3>
-<p>In the themes folder of your hexo project </p>
-<pre><code>hexo init 
-</code></pre><h2 id="Making_your_changes_work">Making your changes work</h2>
-<p>If you have already generated or deployed your site with a theme and then you modify it. it seems hexo does not pick up those changes.  First you need to run the command</p>
-<pre><code>hexo clean 
-</code></pre><p>This will remove the cache and the .deploy folders.  So now when you do</p>
-<pre><code>hexo <span class="keyword">generate</span>
-</code></pre><p>all new files are added to public.</p>
+        <p>Hexo is a modern static website generator &amp; bloging platform written in Node.js. This is a quick guide to get going:</p>
+<h2 id="Install_Node-js">Install Node.js</h2>
+<p>If you havent already got node, go to <a href="http://nodejs.org/" target="_blank">http://nodejs.org/</a> and follow the instructions.  My own preference is to install node into a folder called <strong>app</strong> in my home folder.</p>
+<h2 id="Install_Emacs_(optional)">Install Emacs (optional)</h2>
+<p>This is not a requirement for Hexo. although Emacs and Emacs Live gives a fantastic experience when writing markdown content.  Emacs Live syntactically highlights your markdown content, so headings, links, bold and italic styles are shown in as you type your content.  Italic style content even displays in italic.</p>
+<h2 id="Install_Hexo">Install Hexo</h2>
+<p>There is really good documentation on the <a href="http://hexo.io" target="_blank">hexo.io</a> website, althought all you need to do to install is:</p>
+<pre><code>npm <span class="keyword">install</span> hexo -g
+</code></pre><h2 id="Create_a_Hexo_projects">Create a Hexo projects</h2>
+<p>Create a new hexo project, I usually do this in a folder called projects in my home folder:</p>
+<pre><code>hexo init <span class="keyword">my</span>-project-<span class="property">name</span>
+cd <span class="keyword">my</span>-project-<span class="property">name</span>
+</code></pre><p>This creates a new hexo project in a folder called <strong>my-project-name</strong>, so use what ever name you wish here.</p>
+<h2 id="Configure_Hexo_to_your_will">Configure Hexo to your will</h2>
+<p>[TODO] - just add the basics and come back for deployment.</p>
+<h2 id="Version_your_Hexo_project">Version your Hexo project</h2>
+<p>If you are deploying your website to Github pages then the generated content is versioned by Github.  However, the markdown content for your websites and any configuration changes you make will not be versioned.</p>
+<p>If you are going to use this site for any important content, I’d recommend putting the Hexo project into a github repository (or similar service).  This will also make it easier to migrate your content to an alternative tool than Hexo.</p>
+<h2 id="Running_a_local_Hexo_server">Running a local Hexo server</h2>
+<p>Although you wont have much content at this stage, you can still see what the website looks like by running Hexo server locally:</p>
+<pre><code>hexo <span class="keyword">server</span> 
+</code></pre><p>By default this runs a node application on port 4000, so open your browser at: <a href="http://localhost:4000/" target="_blank">http://localhost:4000/</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/" data-id="jjfm8va1tjsvtxk3" class="article-share-link">Share</a>
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/04/12/getting-started-with-hexo---a-modern-static-site-generator/" data-id="3lpfs8hp718bx0na" class="article-share-link">Share</a>
       
-        <a href="http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://jr0cket.github.io/hexo-themes-test/2014/04/12/getting-started-with-hexo---a-modern-static-site-generator/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/themes/">themes</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/hexo/">hexo</a></li></ul>
 
     </footer>
   </div>
@@ -127,19 +137,10 @@
     
 <nav id="article-nav">
   
-    <a href="/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Hexo - why I prefer it over Octopress
-        
-      </div>
-    </a>
   
-  
-    <a href="/hexo-themes-test/2014/03/29/testing-hexo-themes/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/hexo-themes-test/2014/04/10/hexo-theme-building-with-chrome-developer-tools/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Testing Hexo themes</div>
+      <div class="article-nav-title">Hexo theme building with Chrome developer tools</div>
     </a>
   
 </nav>
@@ -271,7 +272,7 @@
 <script>
   var disqus_shortname = 'disqus_dk7qgmDvT1';
   
-  var disqus_url = 'http://jr0cket.github.io/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/';
+  var disqus_url = 'http://jr0cket.github.io/hexo-themes-test/2014/04/12/getting-started-with-hexo---a-modern-static-site-generator/';
   
   (function(){
     var dsq = document.createElement('script');
