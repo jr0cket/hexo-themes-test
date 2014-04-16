@@ -3,14 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: dev-tools | jr0cket</title>
+  <title>Hexo theme tweaks - showing articles as titles only | jr0cket</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="og:type" content="blog">
-<meta name="og:title">
-<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/categories/dev-tools/">
-<meta name="og:image">
+<meta name="og:title" content="Hexo theme tweaks - showing articles as titles only">
+<meta name="og:url" content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/04/16/hexo-theme-tweaks---showing-articles-as-titles-only/">
+<meta name="og:image" content="/images/hexo-theme-tweak-devtools-delete-node.png">
 <meta name="og:site_name" content="jr0cket">
-<meta name="og:description">
+<meta name="og:description" content="Hexo displays posts in a summary format by default, showing the title and content of the article up to the point where the more marker is used:
+&lt;!-- more --&gt;
+I like this summary format for the m">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@jr0cket">
   
@@ -70,17 +72,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    <article id="post-emacs-org-mode-for-all-your-content" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hexo-theme-tweaks---showing-articles-as-titles-only" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo-themes-test/2014/03/16/emacs-org-mode-for-all-your-content/" class="article-date">
-  <time datetime="2014-03-16T12:35:37.000Z" itemprop="datePublished">16 Mar 2014</time>
+    <a href="/hexo-themes-test/2014/04/16/hexo-theme-tweaks---showing-articles-as-titles-only/" class="article-date">
+  <time datetime="2014-04-16T08:59:33.000Z" itemprop="datePublished">16 Apr 2014</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/hexo-themes-test/categories/dev-tools/">dev-tools</a>
+    <a class="article-category-link" href="/hexo-themes-test/categories/blogging/">blogging</a>
   </div>
 
   </div>
@@ -90,32 +89,90 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/hexo-themes-test/2014/03/16/emacs-org-mode-for-all-your-content/">Emacs Org-mode for all your content</a>
+    <h1 class="article-title" itemprop="name">
+      Hexo theme tweaks - showing articles as titles only
     </h1>
   
 
       </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hexo displays posts in a summary format by default, showing the title and content of the article up to the point where the <code>more</code> marker is used:</p>
+<pre><code><span class="comment">&lt;!-- more --&gt;</span>
+</code></pre><p>I like this summary format for the main page as its where people tend to browse a little more and usually want a little more information to help them decide if they want to read the whole article.  </p>
+<p>[TODO: Insert picture of summary layout]</p>
+<p>However when someone selects the archive, category or tags section, they are most likely looking for something specific and so just showing the titles of the posts helps them scan the articles quickly.</p>
+<p>So this article we will cover how to modify the default Hexo theme, landscape, to show summar and title only views.</p>
+<a id="more"></a>
+
+<h2 id="Understanding_the_layout">Understanding the layout</h2>
+<p>Layout of the page is defined mainly in <a href="https://github.com/visionmedia/ejs" target="_blank">EJS</a> format and then imported via the <code>theme/landscape/source/css/style.styl</code> file that is used to pull together a single <code>style.css</code> file for the whole site (once the site is generated).</p>
+<p>All pages use the default <code>index.ejs</code> [is it index or layout - check the hexo docs] as a base template, over-riding it where desired.  For the front page of the blog this is fine.</p>
+<p>The archive, categories and tag pages all use the same code, however these are the files we are going to change</p>
+<pre><code>theme/landscape/layouts/_partial/archive<span class="preprocessor">.ejs</span>
+theme/landscape/layouts/_partial/category<span class="preprocessor">.ejs</span>
+theme/landscape/layouts/_partial/tag<span class="preprocessor">.ejs</span>
+</code></pre><p>Lets first find out what changes need to be made and in what file.</p>
+<h2 id="Using_Chrome_developer_tools">Using Chrome developer tools</h2>
+<p>You can use the Chrome developer tools to find out the secion of CSS that controls the displaying of the summary part of the article.</p>
+<p>It turns out this summary part of the content is managed by a section called <code>article-entry</code>.  This is included in the file <code>theme/landscape/layouts/_partial/article.ejs</code>:</p>
+<pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"article-entry"</span> <span class="attribute">itemprop</span>=<span class="value">"articleBody"</span>&gt;</span>
+  <span class="vbscript">&lt;% <span class="keyword">if</span> (post.excerpt &amp;&amp; index){ %&gt;</span>
+    <span class="vbscript">&lt;%- post.excerpt %&gt;</span>
+    <span class="vbscript">&lt;% <span class="keyword">if</span> (theme.excerpt_link){ %&gt;</span>
+      <span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"article-more-link"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"&lt;%- config.root %&gt;&lt;%- post.path %&gt;#more"</span>&gt;</span><span class="vbscript">&lt;%= theme.excerpt_link %&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="vbscript">&lt;% } %&gt;</span>
+</code></pre><p>I tested that this was the code rendering the article summary using the Chrome developer tools.  I right-clicked on the first line of the code, the opening <strong>div</strong> tag, and selected <code>delete node</code> </p>
+<img src="/images/hexo-theme-tweak-devtools-delete-node.png">
+
+
+
+<h2 id="Making_the_changes_to_the_theme">Making the changes to the theme</h2>
+<p>There may be better approaches than I have taken, however mine is fairly straight formward.  I simply take a copy of the archive.ejs file and called it archive-titles.ejs.</p>
+<p>I then remove the above code completely from the <code>articles-titles.ejs</code> file and call that file instead from the <code>archive.ejs</code>, <code>category.ejs</code> and <code>tag.ejs</code> files.</p>
+<p>So the archive, catagory and tag files are changed calling the archive.ejs:</p>
+<pre><code>&lt;%- <span class="keyword">partial</span>(<span class="string">'_partial/archive'</span>, {pagination: <span class="number">2</span>, index: <span class="keyword">true</span>}) %&gt;
+</code></pre><p>and now call <code>archive-titles.ejs</code>:</p>
+<pre><code>&lt;<span class="string">%- partial('_partial/archive-</span>titles<span class="string">', {pagination: config.archive, index: true}) %&gt;</span>
+</code></pre><p>With <code>hexo server</code> running these changes are picked up straight away, so we can easily see if the changes worked as expected</p>
+<p>[TODO: image of changed archive]</p>
+
+      
+    </div>
     <footer class="article-footer">
-      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/16/emacs-org-mode-for-all-your-content/" data-id="zmijhbw2c2075dmb" class="article-share-link">Share</a>
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/04/16/hexo-theme-tweaks---showing-articles-as-titles-only/" data-id="r1uazkltd9e9m7or" class="article-share-link">Share</a>
       
-        <a href="http://jr0cket.github.io/hexo-themes-test/2014/03/16/emacs-org-mode-for-all-your-content/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://jr0cket.github.io/hexo-themes-test/2014/04/16/hexo-theme-tweaks---showing-articles-as-titles-only/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/emacs/">emacs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/org-mode/">org-mode</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/themes/">themes</a></li></ul>
 
     </footer>
   </div>
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/hexo-themes-test/2014/04/12/getting-started-with-hexo---a-modern-static-site-generator/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Getting started with Hexo - a modern static site generator</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
-
-  
-  
-
-
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -234,11 +291,13 @@
 <script>
   var disqus_shortname = 'jr0cketcommunitydevelopre';
   
+  var disqus_url = 'http://jr0cket.github.io/hexo-themes-test/2014/04/16/hexo-theme-tweaks---showing-articles-as-titles-only/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//go.disqus.com/count.js';
+    dsq.src = '//go.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
