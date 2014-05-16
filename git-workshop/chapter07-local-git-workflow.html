@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta content="website" property="og:type">
+<meta property="og:title">
+<meta content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/git-workshop/chapter07-local-git-workflow.html" property="og:url">
+<meta content="images/git-cheat-sheet-visual-git-stages.png" property="og:image">
+<meta content="jr0cket" property="og:site_name">
+<meta content="The local git workflow
+To recap, we have our working copy of our files on our laptop.  When we add those files using git, a copy is placed in what git calls Staging.  This allows you to assemble sev" property="og:description">
+<meta content="summary" name="twitter:card">
+<meta content="@jr0cket" name="twitter:creator">
+  
+    <link rel="alternative" href="/hexo-themes-test/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/hexo-themes-test/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexo-themes-test/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/hexo-themes-test/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/hexo-themes-test/">Home</a>
+        
+          <a class="main-nav-link" href="/hexo-themes-test/archives/">Archives</a>
+        
+          <a class="main-nav-link" href="http://clojure.jr0cket.co.uk">Clojure</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.github.io/slides">Slides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.github.io/developer-guides">DevGuides</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/hexo-themes-test/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://jr0cket.github.io/hexo-themes-test"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-themes-test/git-workshop/chapter07-local-git-workflow.html" class="article-date">
+  <time datetime="2014-05-14T12:26:20.000Z" itemprop="datePublished">14 May 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <link href="index.css" rel="stylesheet" type="text/css">
+
+<h1 id="The_local_git_workflow"><a id="chapter7">The local git workflow</a></h1>
+<p>To recap, we have our working copy of our files on our laptop.  When we add those files using git, a copy is placed in what git calls Staging.  This allows you to assemble several files for the commit.</p>
+<p>As we have a local repository right there on our laptop, we can commit all the files added to the staging area.  If you can add a series of small commits and do this often, it gives you a more detaled version history and gives you more points to jump back in time.  Regular commits helps to reduce merge conflicts when working in teams and using smaller commits gives other developers lots of details about how the project has evolved.</p>
+<p>In this visual representation you can see the different git stages in which commits can reside.</p>
+<p><img src="images/git-cheat-sheet-visual-git-stages.png"></p>
+<h2 id="Understanding_git_add_and_the_staging_area">Understanding git add and the staging area</h2>
+<p>When you add a file, you are telling git that you want it to be part of the change you are going to commit.</p>
+<p>Lets say you create a new file with 10 lines of content and then use <em>git add filenname.ext</em> to add it to git.  Then you continue to add another 5 lines the contents of that file.  If you do a commit without adding that file to git again, only the first 10 lines of content will be in that commit.</p>
+<p>If you do a second <em>git add filenname.ext</em> before you commit, then all 15 lines of content will be included in the commit.</p>
+<p>Having to add changes in this way helps you control exactly what makes up your commit without restricting the files you are working on.  Please note that it is advisable to either git add &amp; git commit often so that your changes form part of a meaningful history.</p>
+<h2 id="What_has_been_added_-_What_has_changed_(using_diff)">What has been added - What has changed (using diff)</h2>
+<p>Once you have added files to the staging area with <em>git add</em>, you can compare any changes made to files in your workspace.  Using git diff you can see all changes or specifying a file will show only the differences in that one file.</p>
+<pre><code>git diff
+git diff filename
+</code></pre><p>You can also compare the files you have added to the staging area to those you have committed using the diff option <em>—staging</em></p>
+<pre><code><span class="comment">git</span> <span class="comment">diff</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">staging</span>
+<span class="comment">git</span> <span class="comment">diff</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">staging</span> <span class="comment">filename</span>
+</code></pre><h2 id="Removing_files_from_staging_/_index">Removing files from staging / index</h2>
+<p>You can remove a file you have put in staging (git add filename) using the git command reset</p>
+<pre><code><span class="comment">git</span> <span class="comment">reset</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">soft</span> <span class="comment">HEAD^</span>
+</code></pre><p>rolling back to the previous commit on the local repo<br>    git reset HEAD~1</p>
+<h2 id="To_remove_a_file_from_the_index">To remove a file from the index</h2>
+<pre><code><span class="comment">git</span> <span class="comment">rm</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">cached</span> <span class="comment">filename</span><span class="string">.</span><span class="comment">txt</span>
+</code></pre><h1 id="Working_with_commits_-_git_log,_git_show">Working with commits - git log, git show</h1>
+<p>  Once you have done a commit and there are no more changes in your working directory or staging area, then <em>git status</em> no longer tells you anything.  This is where <em>git log</em> comes in.</p>
+<h2 id="git_log">git log</h2>
+<p>  Git log shows you the history of the commits you have already made.</p>
+<pre><code>git <span class="keyword">log</span>
+</code></pre><p>  By default, git log has a very basic output and shows you the commit number, author, date and commit message.  You can add options to the git log command to get a much nicer and more useful output, even showing which commits have been pushed to one or more remote repositories. </p>
+<pre><code><span class="comment">git</span> <span class="comment">log</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">graph</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">oneline</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">decorate</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">date</span><span class="literal">-</span><span class="comment">relative</span>
+</code></pre><p>You can add this to your git configuration as an alias so you dont have to type it all the time</p>
+<pre><code><span class="comment">git</span> <span class="comment">config</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">global</span> <span class="comment">alias</span><span class="string">.</span><span class="comment">unstage</span> <span class="comment">'log</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">graph</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">oneline</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">decorate</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">date</span><span class="literal">-</span><span class="comment">relative'</span>
+</code></pre><h3 id="Blogs_on_this_subject">Blogs on this subject</h3>
+<ul>
+<li><a href="http://git-scm.com/book/en/Git-Basics-Tips-and-Tricks" target="_blank">Git basic tips and tricks</a></li>
+<li><a href="http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/" target="_blank">Must have alias examples</a></li>
+</ul>
+<h2 id="git_show">git show</h2>
+<p>  Git show displays the contents of a commit (description, files, tags, blobs, etc).  By default it shows the log message and textual diff of the text that was modified in the commit. </p>
+<p>  For tags, it shows the tag message and the referenced objects.</p>
+<p>  The command takes options applicable to the git diff-tree command to control how the changes the commit introduces are shown.</p>
+<p>  [TODO] what are the options for git show </p>
+<pre><code>git <span class="operator"><span class="keyword">show</span>
+git <span class="keyword">show</span> HEAD
+git <span class="keyword">show</span> <span class="number">1234567</span>
+git <span class="keyword">show</span> tag-name</span>
+</code></pre><p>  Using git show without specifying a commit number or tag will show you the latest commit from the branch you are currently in.  This is usually the same information in <em>git show HEAD</em> as HEAD is a special tag that always points to the latest commit.</p>
+<p><a href="#top">Back to top…</a></p>
+<p><a href="index.html">Workshop homepage</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/git-workshop/chapter07-local-git-workflow.html" data-id="8un9sbc41v6qyu73" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.github.io/hexo-themes-test/git-workshop/chapter07-local-git-workflow.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/hexo-themes-test/tags/6ThinkingHats/" style="font-size: 10.00px;">6ThinkingHats</a><a href="/hexo-themes-test/tags/JenkinsCI/" style="font-size: 10.00px;">JenkinsCI</a><a href="/hexo-themes-test/tags/RollingStones/" style="font-size: 10.00px;">RollingStones</a><a href="/hexo-themes-test/tags/Socratic Method/" style="font-size: 10.00px;">Socratic Method</a><a href="/hexo-themes-test/tags/agile/" style="font-size: 20.00px;">agile</a><a href="/hexo-themes-test/tags/atlassian/" style="font-size: 15.71px;">atlassian</a><a href="/hexo-themes-test/tags/blender/" style="font-size: 10.00px;">blender</a><a href="/hexo-themes-test/tags/bootstrap/" style="font-size: 10.00px;">bootstrap</a><a href="/hexo-themes-test/tags/clearvision/" style="font-size: 10.00px;">clearvision</a><a href="/hexo-themes-test/tags/clojure/" style="font-size: 12.86px;">clojure</a><a href="/hexo-themes-test/tags/cloud/" style="font-size: 11.43px;">cloud</a><a href="/hexo-themes-test/tags/collaboration/" style="font-size: 11.43px;">collaboration</a><a href="/hexo-themes-test/tags/confluence/" style="font-size: 10.00px;">confluence</a><a href="/hexo-themes-test/tags/dns/" style="font-size: 10.00px;">dns</a><a href="/hexo-themes-test/tags/dvcs/" style="font-size: 11.43px;">dvcs</a><a href="/hexo-themes-test/tags/emacs/" style="font-size: 14.29px;">emacs</a><a href="/hexo-themes-test/tags/emacs live/" style="font-size: 10.00px;">emacs live</a><a href="/hexo-themes-test/tags/estimation/" style="font-size: 10.00px;">estimation</a><a href="/hexo-themes-test/tags/events/" style="font-size: 11.43px;">events</a><a href="/hexo-themes-test/tags/fonts/" style="font-size: 10.00px;">fonts</a><a href="/hexo-themes-test/tags/gimp/" style="font-size: 10.00px;">gimp</a><a href="/hexo-themes-test/tags/git/" style="font-size: 12.86px;">git</a><a href="/hexo-themes-test/tags/github/" style="font-size: 11.43px;">github</a><a href="/hexo-themes-test/tags/gnome shell/" style="font-size: 10.00px;">gnome shell</a><a href="/hexo-themes-test/tags/google/" style="font-size: 10.00px;">google</a><a href="/hexo-themes-test/tags/graphics/" style="font-size: 10.00px;">graphics</a><a href="/hexo-themes-test/tags/health/" style="font-size: 10.00px;">health</a><a href="/hexo-themes-test/tags/heroku/" style="font-size: 14.29px;">heroku</a><a href="/hexo-themes-test/tags/hexo/" style="font-size: 17.14px;">hexo</a><a href="/hexo-themes-test/tags/hindsight/" style="font-size: 10.00px;">hindsight</a><a href="/hexo-themes-test/tags/inkscape/" style="font-size: 10.00px;">inkscape</a><a href="/hexo-themes-test/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/hexo-themes-test/tags/junit/" style="font-size: 10.00px;">junit</a><a href="/hexo-themes-test/tags/kanban/" style="font-size: 18.57px;">kanban</a><a href="/hexo-themes-test/tags/leadership/" style="font-size: 10.00px;">leadership</a><a href="/hexo-themes-test/tags/lean/" style="font-size: 10.00px;">lean</a><a href="/hexo-themes-test/tags/lenovo/" style="font-size: 15.71px;">lenovo</a><a href="/hexo-themes-test/tags/liferay/" style="font-size: 10.00px;">liferay</a><a href="/hexo-themes-test/tags/markdown/" style="font-size: 10.00px;">markdown</a><a href="/hexo-themes-test/tags/migration/" style="font-size: 10.00px;">migration</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/agile/">agile</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/blogging/">blogging</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/cloud/">cloud</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-event/">dev-event</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-events/">dev-events</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-tools/">dev-tools</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/events/">events</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/javascript/">javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/presenting/">presenting</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/salesforce/">salesforce</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/to-delete/">to-delete</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/ubuntu/">ubuntu</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/ubutnu/">ubutnu</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/20/migrating-articles-to-hexo-from-bloggercom/">Migrating articles to Hexo from blogger.com</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/16/hexo-theme-tweaks---showing-articles-as-titles-only/">Hexo theme tweaks - showing articles as titles only</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/12/getting-started-with-hexo---a-modern-static-site-generator/">Getting started with Hexo - a modern static site generator</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/10/hexo-theme-building-with-chrome-developer-tools/">Hexo theme building with Chrome developer tools</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/02/hexo---why-i-prefer-it-over-octopress/">Hexo - why I prefer it over Octopress</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/02/hexo-static-site-generator---modifying-exiting-themes/">Hexo Static site generator - modifying exiting themes</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/29/testing-hexo-themes/">Testing Hexo themes</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/26/heroku-deploy-a-lot-happens-in-1-minute/">Heroku deploy - a lot happens in 1 minute</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/16/emacs-org-mode-for-all-your-content/">Emacs Org-mode for all your content</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/04">April 2014</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/03">March 2014</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/01">January 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/10">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/09">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/08">August 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/03">March 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/02">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/01">January 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/12">December 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/11">November 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/10">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/07">July 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/04">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/03">March 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/02">February 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/01">January 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/12">December 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/10">October 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/09">September 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/08">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/07">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/06">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/05">May 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/04">April 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/03">March 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/02">February 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/01">January 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/12">December 2010</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/10">October 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/09">September 2010</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/08">August 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/07">July 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/05">May 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/04">April 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/03">March 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/02">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/01">January 2010</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <div>
+      &copy; 2014 John Stevenson<br>
+      <a href="http://jr0cket.github.com/">Blog</a> | <a href="http://github.com/jr0cket">Github</a> | <a href="http://jr0cket.github.io/developer-guides">Developer Guides</a> | <a href="http://twitter.com/jr0cket">Twitter</a>  <br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexo-themes-test/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexo-themes-test/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="http://clojure.jr0cket.co.uk" class="mobile-nav-link">Clojure</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+    <a href="http://jr0cket.github.io/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="http://jr0cket.github.io/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.github.io/hexo-themes-test/git-workshop/chapter07-local-git-workflow.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexo-themes-test/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/hexo-themes-test/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script type="text/javascript" src="/hexo-themes-test/js/script.js"></script>
+  </div>
+</body>
+</html>
