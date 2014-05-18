@@ -707,8 +707,8 @@ a.article-title:hover {
   clear: left;
 }
 .article-entry .img-code {
-  max-width: 480px;
-  max-height: 240px;
+  max-width: 640px;
+  max-height: 320px;
   display: block;
   margin-left: auto;
   margin-right: auto;
