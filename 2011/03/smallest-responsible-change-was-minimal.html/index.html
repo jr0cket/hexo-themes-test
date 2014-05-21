@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Smallest Responsible Change - a lean approach to software development | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta content="article" property="og:type">
+<meta content="Smallest Responsible Change - a lean approach to software development" property="og:title">
+<meta content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2011/03/smallest-responsible-change-was-minimal.html/" property="og:url">
+<meta content="http://3.bp.blogspot.com/-IuhOw3mIqGc/Tv7pfegJPpI/AAAAAAAAAD8/jK6LCgUOf4s/s1600/lam-logo-spiral-design-extra-bigger.png" property="og:image">
+<meta content="jr0cket" property="og:site_name">
+<meta content="Whilst discussing the merits of Behaviour Driven Development at one of the XTC gatherings, I started using the term minimal responsible feature as a way to express how to decide what piece of work" property="og:description">
+<meta content="summary" name="twitter:card">
+<meta content="@jr0cket" name="twitter:creator">
+  
+    <link rel="alternative" href="/hexo-themes-test/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/hexo-themes-test/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexo-themes-test/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/hexo-themes-test/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/hexo-themes-test/">Home</a>
+        
+          <a class="main-nav-link" href="/hexo-themes-test/archives/">Archives</a>
+        
+          <a class="main-nav-link" href="/hexo-themes-test/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="http://clojure.jr0cket.co.uk">Clojure</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.github.io/slides">Slides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.github.io/developer-guides">DevGuides</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/hexo-themes-test/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://jr0cket.github.io/hexo-themes-test"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-smallest-responsible-change-was-minimal.html" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-themes-test/2011/03/smallest-responsible-change-was-minimal.html/" class="article-date">
+  <time datetime="2011-03-19T12:10:00.000Z" itemprop="datePublished">19 Mar 2011</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/hexo-themes-test/categories/agile/">agile</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Smallest Responsible Change - a lean approach to software development
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="http://3.bp.blogspot.com/-IuhOw3mIqGc/Tv7pfegJPpI/AAAAAAAAAD8/jK6LCgUOf4s/s1600/lam-logo-spiral-design-extra-bigger.png" class="img-thumbnail">
+
+
+<p>Whilst discussing the merits of <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development" target="_blank">Behaviour Driven Development</a> at one of the <a href="http://xpday-london.editme.com/eXtremeTuesdayClub" target="_blank">XTC gatherings</a>, I started using the term <strong>minimal responsible feature</strong> as a way to express how to decide what piece of work to tackle next.  I promised <a href="http://lizkeogh.com/" target="_blank">Liz Keogh</a> many moons ago that I would write a blog post about it, so here it is.</p>
+<a id="more"></a>
+
+<p>In the time it has taken me to write this post (its been kicking around in my backlog for a while) I have evolved my thinking on the term and now prefer to use <strong>smallest responsible change (SRC)</strong>.</p>
+<p>The smallest responsible name was triggered by looking at the term minimal marketable feature (MMF), considering what that term expressed and the values that I associated with it.  I still like the MMF term as a more specific way of expressing a similar concept.  With the smallest responsible change I have a term that I am happy to use in a wide range of contexts which helps promote discussion on how to be effective and make value flow.</p>
+<p>Smallest responsible change is a nice general expression of how I like to tackle the work I do, so that the work flows more smoothly and I get more done.  Creating a very effective way of turning large body of work into a series of value deliveries. </p>
+<h2 id="Smallest">Smallest</h2>
+<p>I try where ever to tackle a series of smaller tasks that one big task.  This approach tends to earlier feedback from the results of that work. </p>
+<p>For example, when writing some new functionality, I will pick out a single piece of behaviour from the requirements (user story, use case) and express that behaviour in a scenario / example (a.k.a acceptance test / unit test).  Once the behaviour is defined and implemented by code, I am already getting feedback on the work I am doing.  Any feedback from running the behaviour scenarios (a.k.a tests) I receive shapes the next task.  If a failing test still fails, I know I need to work on the implementation code.  If a passing test now fails, I know I have to look at the code and design and maybe refactor.</p>
+<h2 id="Responsible">Responsible</h2>
+<p>What does it mean to be responsible?  You ask ten people you will get 10 different answers.  This is not surprising as our experiences and feelings about a situation come from a unique history - our life to date.</p>
+<p>The decision on what is a responsible action to take is therefore based on our current circumstances and our previous history, with hopefully a good dash of holistic thinking.</p>
+<p>To be able to define and select the next most responsible action to take therefore requires you to think about your circumstances and base your actions on achieving value.</p>
+<p>For example, if you a person next to you collapsed it may be the most responsible thing to try and give them immediate attention if you had basic first aid training.  If you had no first aid training, then a cry for help may be the most responsible thing.  If there is no one around, then a call to the emergency services may be the most responsible thing to do.</p>
+<p>In software development, if you submit code that breaks the build and the build bunny shames you, it could be the most responsible thing to roll back you code.  It could equally be the most responsible thing to call over some of your team and ask them what is going on (someone may have forgotten to tell you about an API change).  It could also be possible that this issue is always happening with the team and you suggest the team get together and find the root cause to the problem.</p>
+<h2 id="Change">Change</h2>
+<p>Change is happening all the time around us and we need to manage and filter all those changes so we can actually move forward (without a break down).</p>
+<p>If you consider the way the brain works with the eye, the eye captures a constant stream of change so the brain has to filter out and focus on just what is important.  If it were not for this filtering effect our brain would be overwhelmed.</p>
+<p>It is important to limit the amount of change we are dealing with at any moment in time, so the changes are experienced at the rate we can acceptance and deal with them.  It may be seen as heroic to work 12 hours a day and multi-task like crazy, but that is less likely to deliver significant value to your company than if you work at a pace you can sustain.  If we can find a way to filter out changes (tasks) that are of no value at this time, then we can really focus on those few changes that have real value.</p>
+<h2 id="Example_from_a_personal_development_context">Example from a personal development context</h2>
+<p>If I want to read a book, what is the smallest responsible change I can do.  Well, I often define a card on my kanban board to define the value I believe I will get from reading the book and some idea of how to attain and check that I gained that value (or perhaps see if there was anything else I gained).  This is the smallest thing I can do and it is probably the most responsible thing to do as well. </p>
+<p>Part of this first smallest responsible change may be to decide how to read the book and I have a common approach of reading chapter by chapter and also treating the book as if I were reviewing it for others.  So the next smallest responsible change would be to read the first chapter and start to write down my impression of the book and anything important I had learnt.</p>
+<p>The feedback from reading the first chapter may be that I think the book has mislead me about the value I would gain and I would therefore abandon reading any further.  This feedback would then save me much time in the future, as not only would I skip read the rest of the book but I would have a reason as to why I dont want to try read the book at a later date.</p>
+<p>If I tried to do this with several books at the same time, increasing the amount of change I was dealing with, there would be a lot of context switching between the information in each book, even more so if the books were on different topics.  I would have to unload and reload different ideas from each book as I switched over.  It would be very easy to mix my impressions and feedback from one book with another and hence make an incorrect value judgement.</p>
+<p>Hope you enjoy the concept of Smallest Responsible Change and find it useful in your work.</p>
+<p>Thank you.<br><a href="https://twitter.com/jr0cket" target="_blank">@jr0cket</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2011/03/smallest-responsible-change-was-minimal.html/" data-id="51ufuainlt6lq1oj" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.github.io/hexo-themes-test/2011/03/smallest-responsible-change-was-minimal.html/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/agile/">agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/kanban/">kanban</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/lean/">lean</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hexo-themes-test/2011/03/using-git-for-coding-dojo.html/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Using Git for a coding dojo
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hexo-themes-test/2011/03/whats-in-name-lean-agile-machine.html/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Lean Agile machine - What&#39;s in a name</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/hexo-themes-test/tags/6ThinkingHats/" style="font-size: 10.00px;">6ThinkingHats</a><a href="/hexo-themes-test/tags/agile/" style="font-size: 20.00px;">agile</a><a href="/hexo-themes-test/tags/atlassian/" style="font-size: 15.71px;">atlassian</a><a href="/hexo-themes-test/tags/blender/" style="font-size: 10.00px;">blender</a><a href="/hexo-themes-test/tags/bootstrap/" style="font-size: 10.00px;">bootstrap</a><a href="/hexo-themes-test/tags/clojure/" style="font-size: 12.86px;">clojure</a><a href="/hexo-themes-test/tags/cloud/" style="font-size: 11.43px;">cloud</a><a href="/hexo-themes-test/tags/collaboration/" style="font-size: 11.43px;">collaboration</a><a href="/hexo-themes-test/tags/confluence/" style="font-size: 10.00px;">confluence</a><a href="/hexo-themes-test/tags/continuousintegration/" style="font-size: 10.00px;">continuousintegration</a><a href="/hexo-themes-test/tags/dns/" style="font-size: 10.00px;">dns</a><a href="/hexo-themes-test/tags/dvcs/" style="font-size: 11.43px;">dvcs</a><a href="/hexo-themes-test/tags/emacs/" style="font-size: 14.29px;">emacs</a><a href="/hexo-themes-test/tags/emacs live/" style="font-size: 10.00px;">emacs live</a><a href="/hexo-themes-test/tags/estimation/" style="font-size: 10.00px;">estimation</a><a href="/hexo-themes-test/tags/events/" style="font-size: 11.43px;">events</a><a href="/hexo-themes-test/tags/fonts/" style="font-size: 10.00px;">fonts</a><a href="/hexo-themes-test/tags/gimp/" style="font-size: 10.00px;">gimp</a><a href="/hexo-themes-test/tags/git/" style="font-size: 12.86px;">git</a><a href="/hexo-themes-test/tags/github/" style="font-size: 11.43px;">github</a><a href="/hexo-themes-test/tags/google/" style="font-size: 10.00px;">google</a><a href="/hexo-themes-test/tags/graphics/" style="font-size: 10.00px;">graphics</a><a href="/hexo-themes-test/tags/hackday/" style="font-size: 10.00px;">hackday</a><a href="/hexo-themes-test/tags/health/" style="font-size: 10.00px;">health</a><a href="/hexo-themes-test/tags/heroku/" style="font-size: 17.14px;">heroku</a><a href="/hexo-themes-test/tags/hexo/" style="font-size: 17.14px;">hexo</a><a href="/hexo-themes-test/tags/hindsight/" style="font-size: 10.00px;">hindsight</a><a href="/hexo-themes-test/tags/inkscape/" style="font-size: 10.00px;">inkscape</a><a href="/hexo-themes-test/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/hexo-themes-test/tags/junit/" style="font-size: 10.00px;">junit</a><a href="/hexo-themes-test/tags/kanban/" style="font-size: 18.57px;">kanban</a><a href="/hexo-themes-test/tags/leadership/" style="font-size: 10.00px;">leadership</a><a href="/hexo-themes-test/tags/lean/" style="font-size: 10.00px;">lean</a><a href="/hexo-themes-test/tags/lenovo/" style="font-size: 15.71px;">lenovo</a><a href="/hexo-themes-test/tags/liferay/" style="font-size: 10.00px;">liferay</a><a href="/hexo-themes-test/tags/markdown/" style="font-size: 10.00px;">markdown</a><a href="/hexo-themes-test/tags/migration/" style="font-size: 10.00px;">migration</a><a href="/hexo-themes-test/tags/monkigras/" style="font-size: 11.43px;">monkigras</a><a href="/hexo-themes-test/tags/motivation/" style="font-size: 11.43px;">motivation</a><a href="/hexo-themes-test/tags/netbeans/" style="font-size: 11.43px;">netbeans</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/agile/">agile</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/blogging/">blogging</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-event/">dev-event</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-events/">dev-events</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-tools/">dev-tools</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/events/">events</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/javascript/">javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/presenting/">presenting</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/salesforce/">salesforce</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/to-delete/">to-delete</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/ubuntu/">ubuntu</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/ubutnu/">ubutnu</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/migrating-articles-to-hexo-from-bloggercom/">Migrating articles to Hexo from blogger.com</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/hexo-theme-tweaks---showing-articles-as-titles-only/">Hexo theme tweaks - showing articles as titles only</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/getting-started-with-hexo---a-modern-static-site-generator/">Getting started with Hexo - a modern static site generator</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/hexo-theme-building-with-chrome-developer-tools/">Hexo theme building with Chrome developer tools</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/hexo---why-i-prefer-it-over-octopress/">Hexo - why I prefer it over Octopress</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/hexo-static-site-generator---modifying-exiting-themes/">Hexo Static site generator - modifying exiting themes</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/testing-hexo-themes/">Testing Hexo themes</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/heroku-deploy-a-lot-happens-in-1-minute/">Heroku deploy - a lot happens in 1 minute</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/03/emacs-org-mode-for-all-your-content/">Emacs Org-mode for all your content</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/04">April 2014</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/03">March 2014</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/01">January 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/10">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/09">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/08">August 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/03">March 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/02">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/01">January 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/12">December 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/11">November 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/10">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/07">July 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/04">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/03">March 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/02">February 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/01">January 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/12">December 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/10">October 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/09">September 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/08">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/07">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/06">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/05">May 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/04">April 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/03">March 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/02">February 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/01">January 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/12">December 2010</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/10">October 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/09">September 2010</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/08">August 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/07">July 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/05">May 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/04">April 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/03">March 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/02">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/01">January 2010</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <div>
+      &copy; 2014 John Stevenson<br>
+      <a href="http://jr0cket.github.com/">Blog</a> | <a href="http://github.com/jr0cket">Github</a> | <a href="http://jr0cket.github.io/developer-guides">Developer Guides</a> | <a href="http://twitter.com/jr0cket">Twitter</a>  <br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexo-themes-test/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexo-themes-test/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/hexo-themes-test/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="http://clojure.jr0cket.co.uk" class="mobile-nav-link">Clojure</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+    <a href="http://jr0cket.github.io/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="http://jr0cket.github.io/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.github.io/hexo-themes-test/2011/03/smallest-responsible-change-was-minimal.html/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexo-themes-test/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/hexo-themes-test/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script type="text/javascript" src="/hexo-themes-test/js/script.js"></script>
+  </div>
+</body>
+</html>
