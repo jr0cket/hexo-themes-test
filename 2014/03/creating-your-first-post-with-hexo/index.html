@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Creating your first post with Hexo | jr0cket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta content="article" property="og:type">
+<meta content="Creating your first post with Hexo" property="og:title">
+<meta content="http://jr0cket.github.io/hexo-themes-test/hexo-themes-test/2014/03/creating-your-first-post-with-hexo/" property="og:url">
+<meta property="og:image">
+<meta content="jr0cket" property="og:site_name">
+<meta content="So you have installed Hexo (and nodejs), so now you are ready to start blogging.  Use the following command to create a new blog post entry (blog posts are the default type of content, although this c" property="og:description">
+<meta content="summary" name="twitter:card">
+<meta content="@jr0cket" name="twitter:creator">
+  
+    <link rel="alternative" href="/hexo-themes-test/atom.xml" title="jr0cket" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/hexo-themes-test/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexo-themes-test/" id="logo">jr0cket</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/hexo-themes-test/" id="subtitle">community developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/hexo-themes-test/">Home</a>
+        
+          <a class="main-nav-link" href="/hexo-themes-test/archives/">Archives</a>
+        
+          <a class="main-nav-link" href="/hexo-themes-test/workshops">Workshops</a>
+        
+          <a class="main-nav-link" href="http://clojure.jr0cket.co.uk">Clojure</a>
+        
+          <a class="main-nav-link" href="http://ubuntu.jr0cket.co.uk">Ubuntu</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.github.io/slides">Slides</a>
+        
+          <a class="main-nav-link" href="http://jr0cket.github.io/developer-guides">DevGuides</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-github-link" class="nav-icon" href="https://github.com/jr0cket"></a>
+        <a id="nav-linkedin-link" class="nav-icon" href="https://uk.linkedin.com/in/jr0cket"></a>
+        <a id="nav-twitter-link" class="nav-icon" href="https://twitter.com/jr0cket"></a>
+        
+          <a id="nav-rss-link" class="nav-icon" href="/hexo-themes-test/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://jr0cket.github.io/hexo-themes-test"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-creating-your-first-post-with-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-themes-test/2014/03/creating-your-first-post-with-hexo/" class="article-date">
+  <time datetime="2014-03-27T01:36:58.000Z" itemprop="datePublished">27 Mar 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Creating your first post with Hexo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>So you have installed Hexo (and nodejs), so now you are ready to start blogging.  Use the following command to create a new blog post entry (blog posts are the default type of content, although this can be changed in _config.yml):</p>
+<pre><code>hexo <span class="keyword">new</span> <span class="string">"Meaningful blog post title with a hint of SEO"</span>
+</code></pre><p>Hexo will create a new file under source/_posts using the name provided.  You can then edit this file and start creating your content using Markdown.</p>
+<a id="more"></a>
+
+<h2 id="Generating_and_viewing_your_blog">Generating and viewing your blog</h2>
+<p>When you have finished writing your content, you can generate your blog posts using the command:</p>
+<pre><code>hexo <span class="keyword">generate</span> 
+</code></pre><p>This will convert your markdown content into a static website.  Then you can view the site by running it on a server that Hexo provides:</p>
+<pre><code>hexo <span class="keyword">server</span> 
+</code></pre><p>If everything looks good then you may want to publish the generated website somewhere it can be more readily accessed via the Internet.  Once such place is Github Pages (cover this later).</p>
+<p>Later on you may want to tweak your theme and general configurations for the website.</p>
+<h2 id="Tweaking_the_site_configurations">Tweaking the site configurations</h2>
+<p>Just like with Octopress, you edit the _config.yml file and add your name, URL and any other details and settings you want to apply to the general blog.</p>
+<h2 id="Reminder:_Seting_up_Hexo">Reminder: Seting up Hexo</h2>
+<p>In case you forgot how to set Hexo up, then it is basically:</p>
+<ul>
+<li>Download the nodejs binaries (or compile from source if you have time to kill)</li>
+<li>Add nodejs to the path (a setting in your shell rc file - eg. ~/.bashrc or ~/.zshrc)</li>
+<li>Install hexo using: npm install hexo -g (wait for npm to download all the node packages)</li>
+<li>Create a new website using: hexo init website-name (where website-name is just the folder name for your website project)</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jr0cket.github.io/hexo-themes-test/2014/03/creating-your-first-post-with-hexo/" data-id="qp4b907nog7d8q0f" class="article-share-link">Share</a>
+      
+        <a href="http://jr0cket.github.io/hexo-themes-test/2014/03/creating-your-first-post-with-hexo/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-themes-test/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hexo-themes-test/2014/03/deploying-hexo-sites-to-github-pages/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Deploying hexo sites to Github pages
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hexo-themes-test/2014/03/heroku-deploy-a-lot-happens-in-1-minute/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Heroku deploy - a lot happens in 1 minute</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/hexo-themes-test/tags/6ThinkingHats/" style="font-size: 10.00px;">6ThinkingHats</a><a href="/hexo-themes-test/tags/agile/" style="font-size: 20.00px;">agile</a><a href="/hexo-themes-test/tags/atlassian/" style="font-size: 16.25px;">atlassian</a><a href="/hexo-themes-test/tags/blender/" style="font-size: 10.00px;">blender</a><a href="/hexo-themes-test/tags/bootstrap/" style="font-size: 10.00px;">bootstrap</a><a href="/hexo-themes-test/tags/clojure/" style="font-size: 12.50px;">clojure</a><a href="/hexo-themes-test/tags/cloud/" style="font-size: 11.25px;">cloud</a><a href="/hexo-themes-test/tags/collaboration/" style="font-size: 11.25px;">collaboration</a><a href="/hexo-themes-test/tags/confluence/" style="font-size: 10.00px;">confluence</a><a href="/hexo-themes-test/tags/continuousintegration/" style="font-size: 10.00px;">continuousintegration</a><a href="/hexo-themes-test/tags/dns/" style="font-size: 10.00px;">dns</a><a href="/hexo-themes-test/tags/dvcs/" style="font-size: 11.25px;">dvcs</a><a href="/hexo-themes-test/tags/emacs/" style="font-size: 15.00px;">emacs</a><a href="/hexo-themes-test/tags/emacs live/" style="font-size: 10.00px;">emacs live</a><a href="/hexo-themes-test/tags/estimation/" style="font-size: 10.00px;">estimation</a><a href="/hexo-themes-test/tags/events/" style="font-size: 11.25px;">events</a><a href="/hexo-themes-test/tags/fonts/" style="font-size: 10.00px;">fonts</a><a href="/hexo-themes-test/tags/gimp/" style="font-size: 10.00px;">gimp</a><a href="/hexo-themes-test/tags/git/" style="font-size: 13.75px;">git</a><a href="/hexo-themes-test/tags/github/" style="font-size: 11.25px;">github</a><a href="/hexo-themes-test/tags/google/" style="font-size: 10.00px;">google</a><a href="/hexo-themes-test/tags/graphics/" style="font-size: 10.00px;">graphics</a><a href="/hexo-themes-test/tags/hackday/" style="font-size: 10.00px;">hackday</a><a href="/hexo-themes-test/tags/health/" style="font-size: 10.00px;">health</a><a href="/hexo-themes-test/tags/heroku/" style="font-size: 17.50px;">heroku</a><a href="/hexo-themes-test/tags/hexo/" style="font-size: 18.75px;">hexo</a><a href="/hexo-themes-test/tags/hindsight/" style="font-size: 10.00px;">hindsight</a><a href="/hexo-themes-test/tags/inkscape/" style="font-size: 10.00px;">inkscape</a><a href="/hexo-themes-test/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/hexo-themes-test/tags/junit/" style="font-size: 10.00px;">junit</a><a href="/hexo-themes-test/tags/kanban/" style="font-size: 18.75px;">kanban</a><a href="/hexo-themes-test/tags/leadership/" style="font-size: 10.00px;">leadership</a><a href="/hexo-themes-test/tags/lean/" style="font-size: 10.00px;">lean</a><a href="/hexo-themes-test/tags/lenovo/" style="font-size: 16.25px;">lenovo</a><a href="/hexo-themes-test/tags/liferay/" style="font-size: 10.00px;">liferay</a><a href="/hexo-themes-test/tags/markdown/" style="font-size: 10.00px;">markdown</a><a href="/hexo-themes-test/tags/migration/" style="font-size: 10.00px;">migration</a><a href="/hexo-themes-test/tags/monkigras/" style="font-size: 11.25px;">monkigras</a><a href="/hexo-themes-test/tags/motivation/" style="font-size: 11.25px;">motivation</a><a href="/hexo-themes-test/tags/netbeans/" style="font-size: 11.25px;">netbeans</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/Blogging/">Blogging</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/agile/">agile</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/blogging/">blogging</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/cloud/">cloud</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-event/">dev-event</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-events/">dev-events</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/dev-tools/">dev-tools</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/events/">events</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/javascript/">javascript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/presenting/">presenting</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/salesforce/">salesforce</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/to-delete/">to-delete</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/ubuntu/">ubuntu</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/hexo-themes-test/categories/ubutnu/">ubutnu</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/06/hexo-custom-theme---maximising-the-layout-of-the-website/">hexo custom theme - maximising the layout of the website</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/06/hexo-custom-theme---adding-navbar-icon-links-using-fontawesome/">hexo custom theme - adding navbar icon links using fontawesome</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/05/managing-hexo-blog-content-with-git-submodules/">Managing Hexo blog content with Git Submodules</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/05/git-submodules-pros-and-cons/">Git submodules pros and cons</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/migrating-articles-to-hexo-from-bloggercom/">Migrating articles to Hexo from blogger.com</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/hexo-theme-tweaks---showing-articles-as-titles-only/">Hexo theme tweaks - showing articles as titles only</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/getting-started-with-hexo---a-modern-static-site-generator/">Getting started with Hexo - a modern static site generator</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/hexo-theme-building-with-chrome-developer-tools/">Hexo theme building with Chrome developer tools</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/hexo---why-i-prefer-it-over-octopress/">Hexo - why I prefer it over Octopress</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-themes-test/2014/04/hexo-static-site-generator---modifying-exiting-themes/">Hexo Static site generator - modifying exiting themes</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/06">June 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/05">May 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/04">April 2014</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/03">March 2014</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2014/01">January 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/10">October 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/09">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/08">August 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/03">March 2013</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/02">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2013/01">January 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/12">December 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/11">November 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/10">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/07">July 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/04">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/03">March 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/02">February 2012</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2012/01">January 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/12">December 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/10">October 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/09">September 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/08">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/07">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/06">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/05">May 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/04">April 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/03">March 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/02">February 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2011/01">January 2011</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/12">December 2010</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/10">October 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/09">September 2010</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/08">August 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/07">July 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/05">May 2010</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/04">April 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/03">March 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/02">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexo-themes-test/archives/2010/01">January 2010</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <div>
+      &copy; 2014 John Stevenson<br>
+      <a href="http://jr0cket.github.com/">Blog</a> | <a href="http://github.com/jr0cket">Github</a> | <a href="http://jr0cket.github.io/developer-guides">Developer Guides</a> | <a href="http://twitter.com/jr0cket">Twitter</a>  <br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexo-themes-test/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexo-themes-test/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/hexo-themes-test/workshops" class="mobile-nav-link">Workshops</a>
+  
+    <a href="http://clojure.jr0cket.co.uk" class="mobile-nav-link">Clojure</a>
+  
+    <a href="http://ubuntu.jr0cket.co.uk" class="mobile-nav-link">Ubuntu</a>
+  
+    <a href="http://jr0cket.github.io/slides" class="mobile-nav-link">Slides</a>
+  
+    <a href="http://jr0cket.github.io/developer-guides" class="mobile-nav-link">DevGuides</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jr0cketcommunitydevelopre';
+  
+  var disqus_url = 'http://jr0cket.github.io/hexo-themes-test/2014/03/creating-your-first-post-with-hexo/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/hexo-themes-test/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/hexo-themes-test/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script type="text/javascript" src="/hexo-themes-test/js/script.js"></script>
+  </div>
+</body>
+</html>
